@@ -1,0 +1,12 @@
+@mixin transition($type,$val) {
+  -webkit-transition: ease-in $type $val;
+  -moz-transition: ease-in $type $val;
+  -o-transition: ease-in $type $val;
+  transition: ease-in $type $val;
+}
+@mixin bg() {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: $param;
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "variables";
+@import '~bootstrap/scss/bootstrap';
+@import "mixins";
+@import "mediaQuries";
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+.v-center{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-dark{ padding: 0 1rem;
+  .navbar-nav{
+    .nav-item{padding: 0; }
+  }
+
+}
+
+.home{
+  .card{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    .card-body{display: flex; flex-direction: column; justify-content: center; align-items:  center;}
+  }
+}
+
+.cat-list{
+  .card-body{padding: .25rem 0px; max-height: 82vh; overflow-y: auto;}
+  .item{
+    @include transition(all, 320ms);
+    width: 100%;
+    padding: 7px 2rem;
+    position: relative;
+    margin: 2px 0px;
+    cursor: default;
+    &:hover{background: rgba(0,0,0,0.1);}
+    span{float: right;}
+  }
+}
+
+.cat-suggesstion{
+  .card-body{padding: .25rem 0px; max-height: 82vh; overflow-y: auto;}
+  .item{
+    @include transition(all, 320ms);
+    width: 100%;
+    padding: 7px 2rem;
+    position: relative;
+    margin: 2px 0px;
+    cursor: default;
+    &:hover{background: rgba(0,0,0,0.1);}
+    b{display: block;}
+    span::before{content: "By: ";}
+    i{position: absolute; right: 0; top: 0; padding: 3px 10px; font-size: 36px; cursor: pointer; &:hover{color: #f00;}}
+  }
+}
